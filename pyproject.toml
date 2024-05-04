@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "file-mover-interface"
+name = "qtcopy-files"
 version = "0.1.0"
 description = "Copy files to wherever you want to"
 authors = ["Your Name <you@example.com>"]
