@@ -28,6 +28,10 @@ $ ./run
 # check include/working_dir.h to see why that is
 ```
 
+## Troubleshooting
+
+1. While building in Windows with w64devkit, if you ever get something like this `CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage`, open the run script and change the cmake line with this one: `cmake -G "MinGW Makefiles" $cmake_options ..`
+
 ## Preview
 
 https://github.com/DrShahinstein/qtcopy-files/assets/81323808/00d37ce1-0754-4e0f-929d-51ecb4a1fe2f
