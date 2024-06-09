@@ -21,10 +21,14 @@ file(GLOB HEADERS "include/*.h")
 qt6_wrap_ui(UI_HEADERS "ui/dialogwindow.ui")
 qt6_wrap_cpp(MOC_SOURCES ${HEADERS})
 
-add_executable(qtlab ${SOURCES} ${MOC_SOURCES})
+if (WIN32)
+    add_executable(qtlab WIN32 ${SOURCES} ${MOC_SOURCES})
+else()
+    add_executable(qtlab ${SOURCES} ${MOC_SOURCES})
+endif()
+
 target_link_libraries(qtlab PRIVATE Qt6::Widgets)
 target_include_directories(qtlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_definitions(qtlab PRIVATE
     $<$<CONFIG:Release>:RELEASE_BUILD>
 )
-
