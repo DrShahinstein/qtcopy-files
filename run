@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "--release-build" ]]; then
+	cmake_options="-DRELEASE_BUILD=ON"
+else
+	cmake_options=""
+fi
+
+mkdir -p "build"
+cd "build"
+cmake $cmake_options ..
+make
+./qtlab
