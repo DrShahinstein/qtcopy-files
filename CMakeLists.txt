@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(qtlab LANGUAGES CXX)
+project(qtcopy-files LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,13 +20,13 @@ qt6_wrap_ui(UI_HEADERS "ui/dialogwindow.ui")
 qt6_wrap_cpp(MOC_SOURCES ${HEADERS})
 
 if (WIN32)
-    add_executable(qtlab WIN32 ${SOURCES} ${MOC_SOURCES})
+    add_executable(qtcopy-files WIN32 ${SOURCES} ${MOC_SOURCES})
 else()
-    add_executable(qtlab ${SOURCES} ${MOC_SOURCES})
+    add_executable(qtcopy-files ${SOURCES} ${MOC_SOURCES})
 endif()
 
-target_link_libraries(qtlab PRIVATE Qt6::Widgets)
-target_include_directories(qtlab PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_compile_definitions(qtlab PRIVATE
+target_link_libraries(qtcopy-files PRIVATE Qt6::Widgets)
+target_include_directories(qtcopy-files PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_compile_definitions(qtcopy-files PRIVATE
     $<$<CONFIG:Release>:RELEASE_BUILD>
 )
