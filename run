@@ -16,4 +16,4 @@ else
 fi
 
 make
-./qtlab
+./qtcopy-files
