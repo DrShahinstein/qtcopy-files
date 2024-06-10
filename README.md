@@ -23,14 +23,16 @@ $ ./run
 ```
 
 ### Windows
+Using [w64devkit](https://github.com/skeeto/w64devkit) is recommended to avoid the very silly windows problems I've gone through.
+
 ```
 $ mkdir build
 $ cd build/
-$ cmake -G "MinGW Makefiles"
+$ cmake -G "MinGW Makefiles" ..
 
 # or
 
-$ ./run # use w64devkit terminal
+$ ./run # w64devkit must be used
 ```
 
 ### Release Build
