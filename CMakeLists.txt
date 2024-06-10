@@ -10,9 +10,7 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 option(RELEASE_BUILD "Enable Release build" OFF)
 if(RELEASE_BUILD)
-    set(CMAKE_BUILD_TYPE release)
-else()
-    set(CMAKE_BUILD_TYPE source)
+    set(CMAKE_BUILD_TYPE Release)
 endif()
 
 file(GLOB SOURCES "src/*.cpp")
