@@ -18,6 +18,8 @@ If you want to build on your own, make sure you have [cmake](https://cmake.org/)
 $ mkdir build
 $ cd build/
 $ cmake ..
+$ make
+$ ./qtcopy-files
 
 # or
 
@@ -31,6 +33,8 @@ Using [w64devkit](https://github.com/skeeto/w64devkit) is recommended to avoid t
 $ mkdir build
 $ cd build/
 $ cmake -G "MinGW Makefiles" ..
+$ make
+$ ./qtcopy-files
 
 # or
 
@@ -43,6 +47,8 @@ $ mkdir build
 $ cd build/
 $ cmake -DRELEASE_BUILD=ON ..                      # linux
 $ cmake -G "MinGW Makefiles" -DRELEASE_BUILD=ON .. # windows
+$ make
+$ ./qtcopy-files
 
 # or
 
